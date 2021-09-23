@@ -273,8 +273,8 @@ class Migration(migrations.Migration):
                 ),
                 ('notes', models.TextField(blank=True)),
                 ('dh', models.TextField(blank=True)),
-                ('public_key', models.CharField(blank=True, max_length=44)),
-                ('private_key', models.CharField(blank=True, max_length=44)),
+                ('public_key', models.CharField(blank=True, null=True, max_length=44)),
+                ('private_key', models.CharField(blank=True, null=True, max_length=44)),
                 ('details', models.CharField(blank=True, max_length=64, null=True)),
                 (
                     'ca',
@@ -380,8 +380,8 @@ class Migration(migrations.Migration):
                     ),
                 ),
                 ('auto_cert', models.BooleanField(default=False)),
-                ('public_key', models.CharField(blank=True, max_length=44)),
-                ('private_key', models.CharField(blank=True, max_length=44)),
+                ('public_key', models.CharField(blank=True, max_length=44),),
+                ('private_key', models.CharField(blank=True, max_length=44),),
                 (
                     'vni',
                     models.PositiveIntegerField(
